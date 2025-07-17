@@ -35,7 +35,7 @@ app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userroute);
 app.get('/', (req, res) => {
-  res.json("Like this");
+  res.json("API is running");
 });
 
 // Start server and DB connection
