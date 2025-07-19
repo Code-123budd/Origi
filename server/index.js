@@ -14,7 +14,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 const server = createServer(app);
-const allowedOrigins = [process.env.CLIENT_URL];
+const allowedOrigins = [process.env.CLIENT_URL , 'http://localhost:5173/'];
 
 // Middleware
 app.use(cors({
