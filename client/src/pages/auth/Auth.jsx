@@ -29,8 +29,9 @@ function Auth({type}) {
         }
         setLoading(true);
         try {
-            const endpoint = type === 'signup' ? '/auth/signup' : '/auth/login';
+            const endpoint = type === 'signup' ? '/api/auth/signup' : '/api/auth/login';
             const response = await apiClient.post(endpoint, formData);
+            console.log(response)
             toast.success(response.data.message || 'Success!');
             if(type === 'signup'){
                 navigate('/login')
@@ -45,6 +46,7 @@ function Auth({type}) {
                 navigate('/')
             }
         } catch (error) {
+            console.log(error)
             toast.error(error.response?.data?.message || 'Something went wrong!');
         } finally {
             setLoading(false);

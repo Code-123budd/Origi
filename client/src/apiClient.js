@@ -15,6 +15,7 @@ apiClient.interceptors.request.use(
     return config;
   },
   (error) => {
+    console.log(error)
     return Promise.reject(error);
   }
 );
@@ -25,6 +26,7 @@ apiClient.interceptors.response.use(
   },
   (error) => {
     // Handle errors globally here
+    console.log(error)
     return Promise.reject(error);
   }
 );
