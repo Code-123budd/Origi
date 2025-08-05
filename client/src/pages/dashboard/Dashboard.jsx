@@ -338,7 +338,7 @@ function Dashboard() {
       socket.disconnect();
       SocketContext.setSocket();
       updateUser(null);
-      localStorage.removeItem("userData");
+      localStorage.removeItem("user");
       navigate("/login");
     } catch (error) {
       console.error("Logout failed", error);
