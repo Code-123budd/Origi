@@ -30,9 +30,8 @@ const server = createServer(app);
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 // }));
 const allowedOrigins = [
-   "https://origi-six.vercel.app/",
-  "http://localhost:5173",
-  "https://new-video-call.vercel.app",
+   "https://origi-six.vercel.app",
+  "http://localhost:5173"
  
 ];
 
@@ -62,7 +61,7 @@ app.get("/", (req, res) => {
     const io = new Server(server, {
       pingTimeout: 60000,
       cors: {
-        origin: allowedOrigins[0],
+        origin: allowedOrigins,
         methods: ["GET", "POST"],
       },
     });
