@@ -30,7 +30,7 @@ const server = createServer(app);
 //   methods: ['GET', 'POST', 'PUT', 'DELETE'],
 // }));
 const allowedOrigins = [
-   "https://video-backend-three.vercel.app",
+   "https://origi-six.vercel.app/",
   "http://localhost:5173",
   "https://new-video-call.vercel.app",
  
