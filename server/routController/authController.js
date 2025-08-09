@@ -71,7 +71,7 @@ export const LogOut=async(req,res)=>{
     try{
         res.clearCookie('jwt',{
             path:'/',
-            httpsOnly:true,
+            httpOnly:true,
             secure:true
         })
         res.status(200).send({message:"User logout"})
